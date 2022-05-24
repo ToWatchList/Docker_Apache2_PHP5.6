@@ -26,16 +26,3 @@ RUN DEBIAN_FRONTEND=noninteractive && \
     a2enmod rewrite
 
 EXPOSE 80
-
-# 7 Add UID '1000' to www-data
-# RUN usermod -u 1000 www-data
-
-# # 8 Copy existing application directory permissions
-# COPY --chown=www-data:www-data . /var/www/html
-
-# # 9 Change current user to www
-# USER www-data
-
-# 10 Expose port 9000 and start php-fpm server
-# EXPOSE 9000
-# CMD ["php-fpm"]
