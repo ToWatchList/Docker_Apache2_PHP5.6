@@ -1,4 +1,4 @@
-# 1 Set master image
+# Via https://hub.docker.com/r/ubuntu/apache2
 FROM ubuntu/apache2:2.4-22.04_beta
 
 RUN DEBIAN_FRONTEND=noninteractive && \
@@ -23,6 +23,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
         libapache2-mod-php5.6 && \
     rm -rf /var/lib/apt/lists/* && \
     a2enmod php5.6 && \
-    a2enmod rewrite
+    a2enmod rewrite && \
+    sed -i 's/memory_limit = 128M/memory_limit = 256M/g' /etc/php/5.6/apache2/php.ini
 
 EXPOSE 80
