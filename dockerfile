@@ -17,6 +17,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
         php5.6-mbstring \
         php5.6-mcrypt \
         php5.6-mysql \
+        php5.6-pgsql \
         php5.6-opcache \
         php5.6-readline \
         php5.6-xml \
