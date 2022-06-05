@@ -5,6 +5,9 @@ docker rm apache2-container
 
 set -xe
 
+# pull the latest base image
+docker pull ubuntu/apache2:2.4-22.04_beta
+
 ## BUILD AND RUN LOCAL
 docker build . -t towatchlist/apache2php5.6
 
