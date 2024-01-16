@@ -5,9 +5,8 @@ docker rm apache2-container
 
 set -xe
 
-# pull the latest base image
-# https://hub.docker.com/r/ubuntu/apache2
-docker pull ubuntu/apache2:2.4-22.04_beta
+echo "you might want to check the latest base image used in the dockerfile at"
+echo "https://hub.docker.com/r/ubuntu/apache2/tags"
 
 # ## BUILD AND RUN LOCAL
 # docker build . -t towatchlist/apache2php5.6

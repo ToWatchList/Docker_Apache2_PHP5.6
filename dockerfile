@@ -1,11 +1,13 @@
-# Via https://hub.docker.com/r/ubuntu/apache2
+# Via https://hub.docker.com/r/ubuntu/apache2/tags
 FROM ubuntu/apache2:2.4-22.04_beta
+# as of 2024-01-15 this was the latest version to have php5.6 backport support from the ppa below
 
 RUN DEBIAN_FRONTEND=noninteractive && \
     apt update && \
     apt install -y software-properties-common && \
     add-apt-repository ppa:ondrej/php && \
     apt update && \
+    apt upgrade -y && \
     apt install -y \
         php-common \
         php5.6 \
